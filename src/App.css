@@ -1,38 +1,146 @@
-.App {
+.login-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    cursor: pointer;
+}
+.login-button svg {
+    padding-top: 3px;
+    margin-right: 4px;
+}
+.menu-icon{
+  display: none;
+}
+.nav-section {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu-list {
+    display: flex;
+    list-style-type: none;
+}
+.menu-x {
+    display: none;
+}
+.menu-list li {
+    padding: 15px;
+    cursor: pointer;
+}
+.menu-list li a{
+  color: #000;
+  text-decoration: none;
+}
+.menu-area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.search-box {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    border-bottom: 1px solid #000;
+}
+.search-box input {
+    padding: 5px 6px;
+    margin-left: 10px;
+    border: 0;
+    outline: none;
+}
+.product-card {
+    background-color: white;
+    cursor: pointer;
+}
+.product-card:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+.card-img {
+    overflow: hidden;
+}
+.product-img {
+    display: flex;
+    justify-content: flex-end;
+}
+.product-des div {
+    padding: 5px;
+}
+.choice {
+    font-size: 12px;
+}
+.add-button {
+    padding: 5px;
+    width: 70%;
+}
+.mb-menu{
+  display: block;
+  position: absolute;
+  top: -139px;
+  left: 0;
+  background-color: darkkhaki;
+  padding:30px 50px;
+  height: 100vh;
+}
+.mb-menu li{
+  list-style-type: none;
+  padding:10px 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mb-menu li a{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1200px) {
+  .menu-area{
+    flex-direction: column;
+  }
+  .search-box{
+    position: relative;
+    margin:0 auto;
+    margin-bottom: 40px;
+  }
+  .search-box input{
+    width: 150px;
+    height: 30px;
+  }
+  .menu-list{
+    justify-content: center;
+  }
+  .menu-list li {
+    padding-bottom: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 750px) {
+  .login-button{
+    display: flex;
+    justify-content: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+  .login-button div{
+    margin-left: auto;
+  }
+  .menu-icon{
+    display: flex;
+    justify-content: left;
+    color:#000;
+    transition: 0.3s;
+  }
+  .menu-list{
+    display: none;
+  }
+  .menu-list li{
+    text-align: center;
+  }
+  .menu-x {
+    display: block;
+    text-align: right;
+    color:#000;
+    position:absolute;
+    top: 10px;
+    right:30px;
+    cursor: pointer;
   }
 }
